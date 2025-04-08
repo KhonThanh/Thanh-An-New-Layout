@@ -1,0 +1,346 @@
+/* ---- setting cơ bản */
+
+:root {
+    --primary-color: #283373;
+    --secondary-color: #E34A19;
+    --background-color: #F2F4F7;
+    --color-white: #ffffff;
+    --color-black: #252525;
+    --color-gray: #575757;
+    --font-name: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    caret-color: transparent;
+}
+
+body {
+    font-family: var(--font-name);
+    background-color: var(--background-color);
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding: 0px;
+    margin: 0px;
+}
+
+a {
+    text-decoration: none;
+    font-size: 14px;
+}
+
+p {
+    font-size: 14px;
+}
+
+ul {
+    list-style: none;
+}
+
+section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background-color: var(--primary-color);
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
+    min-height: 91px;
+}
+
+.background-color__white {
+    background-color: var(--color-white);
+}
+
+/* ---- setting bên trong website ----------- */
+
+.bestprice-content,
+.top-bar__content,
+.header-bar__content,
+.sidebar__content {
+    max-width: 1200px;
+    width: calc(1200px - 20px);
+}
+
+/* ---- css phần top bar đầu trang */
+
+.top-bar {
+    padding: 10px 0px;
+    min-height: 85px;
+}
+
+.top-bar__content {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.top-bar__item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    min-width: 240px;
+    min-height: 65px;
+}
+
+.top-bar__item>p {
+    font-size: 16px;
+    color: var(--primary-color);
+}
+
+.top-bar__item>svg {
+    width: 24px;
+    fill: var(--primary-color);
+}
+
+.top-bar__otheritem {
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    padding: 10px 20px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    min-width: 180px;
+    min-height: 65px;
+}
+
+
+.top-bar__otheritem>svg {
+    width: 24px;
+    fill: var(--color-white);
+}
+
+.company-info__contact>p {
+    font-size: 16px;
+    color: var(--color-white);
+}
+
+.company-info__contact>span {
+    font-size: 18px;
+    color: var(--color-white);
+}
+
+/* ---- css phần header menu ------ */
+
+.header-bar__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 44px;
+    min-width: 151px;
+}
+
+.header-bar__content svg {
+    fill: var(--color-white);
+    width: 22px;
+    height: 22px;
+}
+
+.logo {
+    aspect-ratio: 195 / 87;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.search {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 100px;
+    background-color: var(--color-white);
+    padding: 10px 20px;
+    border-radius: 50px;
+    min-width: 357px;
+}
+
+.search-icon>svg {
+    fill: var(--primary-color);
+}
+
+.search-input {
+    border: none;
+    font-size: 16px;
+}
+
+.header-bar__function {
+    display: flex;
+    gap: 20px;
+}
+
+.header-bar__item {
+    display: flex;
+    gap: 10px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: 1px solid var(--color-white);
+    width: fit-content;
+    align-items: center;
+    height: fit-content;
+}
+
+.header-bar__item>p {
+    font-size: 16px;
+    color: var(--color-white);
+}
+
+/* ------- css phần sidebar ------- */
+
+.sidebar__content {
+    display: grid;
+    grid-template-columns: 2fr 6fr 2fr;
+    gap: 20px;
+    padding: 10px content: '\F0F0E';
+    ;
+    min-height: 344px;
+}
+
+.sidebar__content>* {
+    height: 100%;
+}
+
+.sidebar__banner,
+.sidebar__search,
+.sidebar__menu {
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar__menu {
+    padding: 20px 10px;
+    background-color: var(--color-white);
+    border-radius: 10px;
+}
+
+.sidebar__menu>ul>li>a {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.sidebar__menu>ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar__menu>ul>li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sidebar__menu>ul>li>img,
+.sidebar__menu>ul>li>svg {
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    min-height: 20px;
+}
+
+.sidebar__menu>ul>li>svg {
+    fill: var(--primary-color);
+}
+
+.sidebar__banner>div {
+    width: 100%;
+    height: 100%;
+}
+
+.sidebar__banner>div>img {
+    height: 100%;
+    aspect-ratio: 802 / 344;
+    border-radius: 10px;
+    object-fit: none;
+}
+
+.sidebar__search {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-image: url(../img/logo+about/search.png);
+    background-repeat: no-repeat;
+    padding: 10px;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.sidebar__search select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    color: var(--color-gray);
+    appearance: none;
+    /* bỏ style mặc định */
+    background-image: url('../img/icon-social-network/chevron-down.svg');
+    /* icon mũi tên */
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px;
+}
+
+.sidebar__title {
+    text-transform: uppercase;
+    color: var(--color-white);
+    font-weight: bold;
+    text-align: center;
+    font-size: 14px;
+}
+
+.btn-submit {
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: var(--color-white);
+    border-radius: 5px;
+    font-size: 14px;
+    border: none;
+    font-weight: bold;
+}
+
+/* ----- css sản phẩm giá tốt nhất --------- */
+.bestprice {}
+
+.bestprice-content {
+    padding: 20px 0px 30px 0px;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+}
+
+.bestprice-title {
+    width: 100%;
+    padding: 0px 10px;
+}
+
+.strong-text,
+.outlined-text {
+    font-weight: 700;
+    padding: 2px 6px;
+    font-size: 42px;
+}
+.outlined-text{
+    -webkit-text-fill-color: transparent; 
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color:var(--color-white);
+}
+.strong-text{
+    color: var(--color-white);
+}
+
+.bestprice-time {}
+
+.bestprice-slide__product {}
