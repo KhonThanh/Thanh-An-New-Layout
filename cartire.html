@@ -16,54 +16,42 @@
     <section data-include="toppage.html" id="top-page__placeholder" class="top-bar"></section>    </section>
     <header data-include="header.html" class="header-bar"></header>
     <main>
-        <section class="sidebar">
-            <div class="container sidebar__content">
-                <nav class="sidebar__menu">
-                    <ul>
-                        <li>
-                            <img width="178" height="178" src="./img/icon-social-network/icon-menu.png" alt="">
-                            <a href="./cartire.html">Lốp ô tô</a>
-                        </li>
-                        <li>
-                            <img src="./img/icon-social-network/search.png" alt="">
-                            <a href="#">Theo lốp xe</a>
-                        </li>
-                        <li>
-                            <img width="178" height="178" src="./img/icon-social-network/icon-menu.png" alt="">
-                            <a href="#">Lốp Michelin</a>
-                        </li>
-                        <li>
-                            <img width="178" height="178" src="./img/icon-social-network/icon-menu.png" alt="">
-                            <a href="#">Lốp Bridgestone</a>
-                        </li>
-                        <li>
-                            <img width="178" height="178" src="./img/icon-social-network/icon-menu.png" alt="">
-                            <a href="#">Lốp Maxxis</a>
-                        </li>
-                        <li>
-                            <img width="178" height="178" src="./img/icon-social-network/icon-menu.png" alt="">
-                            <a href="#">Lốp Pirelli</a>
-                        </li>
-                        <li>
-                            <img width="178" height="178" src="./img/icon-social-network/icon-menu.png" alt="">
-                            <a href="#">Lốp Kumnho</a>
-                        </li>
-                        <li>
-                            <img width="178" height="178" src="./img/icon-social-network/icon-menu.png" alt="">
-                            <a href="#">Lốp Yokohama</a>
-                        </li>
-                        <li>
-                            <img width="178" height="178" src="./img/icon-social-network/icon-menu.png" alt="">
-                            <a href="#">Lốp Michelin</a>
-                        </li>
-                    </ul>
+        <section>
+            <div class="container">
+                <nav class="navigation">
+                    <ol class="navigation__list">
+                        <li class="navigation__item"><a href="./index.html">Trang chủ</a></li>
+                        <li class="navigation__item"><a href="#">Lốp ô tô</a></li>
+                    </ol>
                 </nav>
-                <div id="sidebar__banner" class="sidebar__banner">
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="big__banner">
                     <div>
-                        <img width="802" height="344" src="./img/banner/bannerhomepage.png" alt="">
+                        <img width="1200" height="300" src="./img/banner/bannerpage_child.png" alt="banner trang con">
                     </div>
                 </div>
-                <div class="sidebar__search">
+            </div>
+        </section>
+        <section>
+            <div class="find__container container" >
+                <div class="sidebar__search sidebar__custom">
+                    <p class="sidebar__title">tìm theo mẫu xe</p>
+                    <select title="Nhãn hiệu xe" name="brand">
+                        <option value="">Hãng</option>
+                        <option value="nike">Nike</option>
+                        <option value="adidas">Adidas</option>
+                    </select>
+                    <select title="Loại" name="category">
+                        <option value="">Mẫu</option>
+                        <option value="ao">Áo</option>
+                        <option value="quan">Quần</option>
+                    </select>
+                    <button class="btn-submit" type="submit">Tìm theo xe</button>
+                </div>
+                <div class="sidebar__search sidebar__custom">
                     <p class="sidebar__title">tìm theo mẫu xe</p>
                     <select title="Nhãn hiệu xe" name="brand">
                         <option value="">Hãng</option>
@@ -79,7 +67,7 @@
                 </div>
             </div>
         </section>
-        <section class="bestprice">
+        <section>
             <div class="container bestprice-content">
                 <div class="bestprice-title">
                     <h1 id="bestprice-title" class="highlight-title">
@@ -126,8 +114,6 @@
                 </div>
             </div>
         </section>
-        <section data-include="newsusefull.html"></section>
-        <section data-include="brandInfo.html"></section>
         <section>
             <div class="container category-product">
                 <div class="category-header">
@@ -241,155 +227,6 @@
                             </div>
                         </a>
                     </div>
-                </div>
-            </div>
-        </section>
-        <section>
-            <div class="container category-product">
-                <div class="category-header">
-                    <h2 id="all-brand__car" class="category-product__header">Xe phổ biến </h2>
-                    <div class="category-tag">
-                        <a href="#" class="tag">Michelin</a>
-                        <a href="#" class="tag">Bridgestone</a>
-                        <a href="#" class="tag">Maxxis</a>
-                        <a href="#" class="tag">Pirelli</a>
-                        <a href="#" class="tag">Kumho</a>
-                        <a href="#" class="tag">Yokohama</a>
-                        <a href="#" class="tag">Michelin</a>
-                        <a href="#" class="tag">Bridgestone</a>
-                        <a href="#" class="tag">Maxxis</a>
-                        <a href="#" class="tag">Pirelli</a>
-                        <a href="#" class="tag">Kumho</a>
-                        <a href="#" class="tag">Yokohama</a>
-                    </div>
-                </div>
-                <div class="category-body background-color__white">
-                    <div class="listproduct">
-                        <a href="#" class="product-item__link">
-                            <div class="product-item">
-                                <div class="product-item__img">
-                                    <img src="./img/product-car/car-model.png"
-                                        alt="Cảm biến áp suất lốp ICAR Ellisafe ADI4">
-                                </div>
-                                <div class="product-item__info">
-                                    <p class="product-item__title">
-                                        cảm biến áp suất lốp icar ellisafe adi4
-                                    </p>
-                                    <hr>
-                                    <p class="product-item__detail">
-                                        là thiết bị theo dõi áp suất và nhiệt độ lốp xe thông minh, giúp bạn kiểm soát tình
-                                    trạng lốp xe theo thời gian thực ngay trên màn hình điện thoại thông qua kết nối
-                                    Bluetooth.
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" class="product-item__link">
-                            <div class="product-item">
-                                <div class="product-item__img">
-                                    <img src="./img/product-car/car-model.png"
-                                        alt="Cảm biến áp suất lốp ICAR Ellisafe ADI4">
-                                </div>
-                                <div class="product-item__info">
-                                    <p class="product-item__title">
-                                        cảm biến áp suất lốp icar ellisafe adi4
-                                    </p>
-                                    <hr>
-                                    <p class="product-item__detail">
-                                        là thiết bị theo dõi áp suất và nhiệt độ lốp xe thông minh, giúp bạn kiểm soát tình
-                                    trạng lốp xe theo thời gian thực ngay trên màn hình điện thoại thông qua kết nối
-                                    Bluetooth.
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" class="product-item__link">
-                            <div class="product-item">
-                                <div class="product-item__img">
-                                    <img src="./img/product-car/car-model.png"
-                                        alt="Cảm biến áp suất lốp ICAR Ellisafe ADI4">
-                                </div>
-                                <div class="product-item__info">
-                                    <p class="product-item__title">
-                                        cảm biến áp suất lốp icar ellisafe adi4
-                                    </p>
-                                    <hr>
-                                    <p class="product-item__detail">
-                                        là thiết bị theo dõi áp suất và nhiệt độ lốp xe thông minh, giúp bạn kiểm soát tình
-                                    trạng lốp xe theo thời gian thực ngay trên màn hình điện thoại thông qua kết nối
-                                    Bluetooth.
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" class="product-item__link">
-                            <div class="product-item">
-                                <div class="product-item__img">
-                                    <img src="./img/product-car/car-model.png"
-                                        alt="Cảm biến áp suất lốp ICAR Ellisafe ADI4">
-                                </div>
-                                <div class="product-item__info">
-                                    <p class="product-item__title">
-                                        cảm biến áp suất lốp icar ellisafe adi4
-                                    </p>
-                                    <hr>
-                                    <p class="product-item__detail">
-                                        là thiết bị theo dõi áp suất và nhiệt độ lốp xe thông minh, giúp bạn kiểm soát tình
-                                    trạng lốp xe theo thời gian thực ngay trên màn hình điện thoại thông qua kết nối
-                                    Bluetooth.
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" class="product-item__link">
-                            <div class="product-item">
-                                <div class="product-item__img">
-                                    <img src="./img/product-car/car-model.png"
-                                        alt="Cảm biến áp suất lốp ICAR Ellisafe ADI4">
-                                </div>
-                                <div class="product-item__info">
-                                    <p class="product-item__title">
-                                        cảm biến áp suất lốp icar ellisafe adi4
-                                    </p>
-                                    <hr>
-                                    <p class="product-item__detail">
-                                        là thiết bị theo dõi áp suất và nhiệt độ lốp xe thông minh, giúp bạn kiểm soát tình
-                                    trạng lốp xe theo thời gian thực ngay trên màn hình điện thoại thông qua kết nối
-                                    Bluetooth.
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                        
-                    </div>
-                    <div class="category-btn">
-                        <a href="#" class="category-btn__custom seemore">
-                            <div class="category-btn__content">
-                                Xem thêm sản phẩm
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section>
-            <div class="container news-sign background-color__white">
-                <div class="news-sign__img">
-                    <img width="590" height="527" src="./img/news/image.png" alt="">
-                </div>
-                <div class="news-sign__form">
-                    <h3 class="news-sign_title">nhận ưu đãi báo giá tư vấn với chuyên viên</h3>
-                    <form class="form-register">
-                        <input type="text" name="name" placeholder="Họ và tên" required />
-                        <input type="tel" name="phone" placeholder="Số điện thoại" required />
-                        <select title="danh sách lựa chọn" name="purpose">
-                            <option value="">Anh / chị cần tư vấn</option>
-                            <option value="lop">Thay lốp</option>
-                            <option value="can-chinh">Cân chỉnh lốp</option>
-                            <option value="tu-van">Tư vấn chọn lốp</option>
-                        </select>
-                        <button type="submit">GỬI NGAY</button>
-                    </form>
                 </div>
             </div>
         </section>
