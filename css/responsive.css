@@ -1,0 +1,445 @@
+/* css reponsive size padding cho toan boj layout */
+@media screen and (max-width: 1200px) {
+
+    .footer__container,
+    .popular-products__container,
+    .sidebar__content,
+    .news-sign,
+    .category-header,
+    .header-bar__content {
+        width: calc(100% - 40px);
+    }
+
+    .top-bar__content {
+        padding: 0px 20px;
+    }
+
+    .news-vertical,
+    .news-horizontal,
+    .usefull-information,
+    .bestprice-content {
+        border-radius: 0;
+    }
+
+    .category-header {
+        padding: 0px 20px;
+    }
+
+    .usefull-information {
+        padding: 20px;
+    }
+}
+
+/* css responvise size tu 1119px den 950px */
+@media screen and (max-width: 1119px) and (min-width: 950px) {
+    .sidebar__menu {
+        display: none;
+    }
+
+    .sidebar__content {
+        grid-template-columns: 1fr 20%;
+    }
+
+    .header-bar__item {
+        min-width: 49px;
+        padding: 0px;
+    }
+
+    .header-bar__item>p {
+        display: none;
+    }
+
+    .strong-text,
+    .outlined-text {
+        font-weight: 700;
+        padding: 2px 6px;
+        font-size: 36px;
+    }
+
+
+    .brand__content {
+        gap: 10px;
+    }
+
+    .brand__title {
+        font-size: 28px;
+    }
+
+    .brand__sup {
+        line-height: 18px;
+    }
+
+    .brand__infor {
+        gap: 10px;
+    }
+
+    .category-product__header {
+        font-size: 20px;
+    }
+
+    .product-item {
+        min-height: 220px;
+    }
+
+    .product-item__title {
+        font-size: 14px;
+    }
+
+    .news-sign_title {
+        font-size: 20px;
+    }
+
+    .brand-logo>h2,
+    .popular-products__title {
+        font-size: 20px;
+    }
+
+    .footer__title {
+        font-size: 14px;
+    }
+
+}
+
+
+/* css responsive sive tu 949px den  769px*/
+@media screen and (max-width: 949px) and (min-width: 769px) {
+
+    .header-bar__item:nth-child(2),
+    .header-bar__item:nth-child(1) {
+        display: none;
+    }
+
+    .sidebar__menu {
+        display: none;
+    }
+
+    .sidebar__content {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar__title {
+        font-size: 28px;
+    }
+
+    .sidebar__search {
+        padding: 40px 20%;
+    }
+
+    .news-vertical {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .brand__content {
+        gap: 10px;
+    }
+
+    .brand__title {
+        font-size: 24px;
+    }
+
+    .category-product__header {
+        font-size: 18px;
+    }
+
+    .listproduct {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        gap: 20px;
+        padding-bottom: 10px;
+    }
+
+    .product-item__link {
+        flex: 0 0 auto;
+        width: calc(25% - 20px);
+        scroll-snap-align: start;
+    }
+
+    .listproduct::-webkit-scrollbar {
+        display: none;
+    }
+
+    .listproduct {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+}
+
+/* css responsive size tu 768 đến 628 */
+@media screen and (max-width: 768px) and (min-width: 628px) {
+    .top-bar {
+        display: none;
+    }
+    .top-bar__mobile{
+        display: block;
+    }
+
+    .search{
+        display: none;
+    }
+
+    .header-bar__item:nth-child(2),
+    .header-bar__item:nth-child(1) {
+        display: none;
+    }
+
+    .sidebar__menu {
+        display: none;
+    }
+
+    .sidebar__content {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar__title {
+        font-size: 28px;
+    }
+
+    .sidebar__search {
+        padding: 40px 20%;
+    }
+
+    .news-horizontal__sup {
+        font-size: 14px;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .news-horizontal__title {
+        font-size: 20px;
+    }
+
+    .news-vertical {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .brand__infor {
+        gap: 20px;
+    }
+
+    .brand-btn__content {
+        font-size: 14px;
+    }
+
+
+    .category-product__header {
+        font-size: 18px;
+    }
+
+    .listproduct {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        gap: 20px;
+        padding-bottom: 10px;
+    }
+
+    .product-item__link {
+        flex: 0 0 auto;
+        width: calc(33.3% - 20px);
+        scroll-snap-align: start;
+    }
+
+    .listproduct::-webkit-scrollbar {
+        display: none;
+    }
+
+    .listproduct {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .popular-products__title,
+    .news-sign_title{
+        font-size: 16px;
+    }
+
+    .form-register{
+        gap: 10px;
+    }
+
+    .form-register button,
+    .form-register select ,
+    .form-register input{
+        padding: 10px 20px;
+    }
+    .popular-products__tags{
+        gap: 10px;
+    }
+    
+    .brand-logo__list{
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    .footer__container{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .footer-icon__social{
+        grid-template-columns: repeat(6,1fr);
+        gap: 20px;
+        align-self: center;
+    }
+}
+
+/* css responsive size 627 đến 425 */
+@media screen and (max-width: 627px) and (min-width: 426px) {
+    .top-bar {
+        display: none;
+    }
+    .top-bar__mobile{
+        display: block;
+        margin: 10px;
+    }
+
+    .search{
+        display: none;
+    }
+
+    .header-bar__item:nth-child(2),
+    .header-bar__item:nth-child(1) {
+        display: none;
+    }
+
+    .sidebar__menu {
+        display: none;
+    }
+
+    .sidebar__content {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar__title {
+        font-size: 28px;
+    }
+
+    .sidebar__search {
+        padding: 40px 20%;
+    }
+
+    .news-horizontal__sup {
+        font-size: 14px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .news-horizontal__title {
+        font-size: 18px;
+    }
+
+    .news-vertical {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .btn-seemore{
+        padding: 8px 30px;
+        font-size: 14px;
+    }
+
+    .brand-intro{
+        flex-direction: column-reverse;
+    }
+
+    .brand__infor{
+        gap: 20px;
+    }
+
+    
+    .listproduct {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        gap: 20px;
+        padding-bottom: 10px;
+    }
+
+    .product-item__link {
+        flex: 0 0 auto;
+        width: calc(50% - 20px);
+        scroll-snap-align: start;
+    }
+
+    .listproduct::-webkit-scrollbar {
+        display: none;
+    }
+
+    .listproduct {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .category-header{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .category-product__header{
+        font-size: 20px;
+    }
+
+    .news-sign{
+        flex-direction: column;
+        height: fit-content;
+        padding-bottom: 30px;
+    }
+
+    .news-sign_title{
+        font-size: 20px;
+    }
+
+    .form-register button,
+    .form-register select ,
+    .form-register input{
+        padding: 10px 20px;
+    }
+    .popular-products__tags{
+        gap: 10px;
+    }
+    .brand-logo__list{
+        grid-template-columns: repeat(3,1fr);
+    }
+    
+    .footer__container{
+        grid-template-columns: 1fr;
+    }
+
+    .footer-icon__social{
+        display: flex;
+        gap: 20px;
+    }
+
+    .logo__partner{
+        width: 50%;
+    }
+
+    .userfull-seemore{
+        min-width: 39px;
+    }
+
+    .userfull-seemore span{
+        display: none;
+    }
+ 
+    .strong-text, .outlined-text {
+        font-size: 32px;
+    }
+}
+
+/* css responsive size <425px */
+@media screen and (max-width: 425px) {
+    .container {
+        width: calc(100% - 20px);
+    }
+
+    .top-bar {
+        display: none;
+    }
+
+
+}
