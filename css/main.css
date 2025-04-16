@@ -94,8 +94,9 @@ select:focus {
 }
 
 .top-bar__mobile {
-    width: calc(100% - 20px);
+    width: 100%;
     display: none;
+    padding: 10px 0px;
 }
 
 .top-bar__content {
@@ -109,7 +110,7 @@ select:focus {
     align-items: center;
     justify-content: center;
     gap: 10px;
-    padding: 10px 20px;
+    padding: 10px 0px;
     min-width: 240px;
     min-height: 65px;
 }
@@ -210,12 +211,10 @@ select:focus {
     display: flex;
     min-height: 49px;
     min-width: 158px;
-    justify-content: space-between;
     gap: 10px;
     padding: 10px 20px;
     border-radius: 50px;
     border: 1px solid var(--color-white);
-    display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
@@ -385,7 +384,7 @@ select:focus {
 .strong-text,
 .outlined-text {
     font-weight: 700;
-    padding: 2px 6px;
+    padding: 2px 0px;
     font-size: 42px;
 }
 
@@ -405,6 +404,7 @@ select:focus {
     justify-content: center;
 }
 
+.time-container,
 .bestprice-container {
     display: flex;
     gap: 10px;
@@ -412,7 +412,7 @@ select:focus {
 }
 
 .bestprice-container>span,
-.bestprice-container>p {
+.time-container>p {
     font-size: 14px;
     color: var(--color-white);
 }
@@ -511,10 +511,12 @@ select:focus {
     border-radius: 10px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .container_function {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 39px);
     gap: 10px;
 }
 
@@ -803,6 +805,7 @@ select:focus {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 20px;
 }
 
 .brand__content {
@@ -1115,6 +1118,9 @@ select:focus {
 /* css chúng tôi cũng tìm kiếm */
 .popular-products__container {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .popular-products {
@@ -1284,6 +1290,10 @@ select:focus {
 
 .logo__partner {
     width: 70%;
+    aspect-ratio: 137 / 43;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
 }
 
 /*------------- css cho trang con ------------ */
