@@ -1,0 +1,242 @@
+/* ---- css phần header menu ------ */
+.header-bar__content {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-bar__item {
+    gap: 20px;
+    color: var(--color-white);
+}
+
+.header-bar__item img{}
+
+.logo {}
+
+.custom-list {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 10px 20px;
+    border: 1px solid var(--color-white);
+}
+
+.content-contact__title,
+.content-contact span {
+    color: var(--color-white);
+}
+
+.content-contact span {
+    font-weight: bolder;
+    font-size: 16px;
+}
+
+.content-contact__title {
+    font-style: italic;
+    font-weight: 100;
+    font-size: 14px;
+}
+
+/* css cho phần sản phẩm võ xe */
+
+.custom-grid__bestproduct {
+    grid-template-columns: 25% 1fr;
+    gap: 20px;
+}
+
+.listmenu-brandandsize {
+    background-color: var(--color-white);
+    padding: 20px;
+    gap: 20px;
+    flex-direction: column;
+    box-shadow: 1px 1px 5px  var(--color-gray) ;
+}
+
+.menulist__tire {
+    flex-direction: column;
+    gap: 20px;
+}
+
+.old-tire__title,
+.menulist__tire p {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.menulist__tire p {
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+
+.old-tire__title{
+    color: var(--primary-color);
+    font-size: calc(var(--font-size-base) + 8px);
+}
+.menulist__tire p {
+    font-size: var(--font-size-base);
+    color: var(--primary-color);
+}
+
+.list__item {
+    flex-direction: column;
+    gap: 10px;
+}
+
+.list__item a{
+    text-transform: capitalize;
+}
+
+
+.list-product {
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 20px;
+}
+
+.news-product__container {
+    gap: 20px;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.product-container__item{
+    flex-direction: column;
+    gap: 10px;
+}
+
+.product-container__item p {
+    font-weight: bold;
+    font-size: var(--font-size-base);
+    color: var(--primary-color);
+    text-transform: uppercase;
+}
+
+.product-container__item p:last-child{
+    color: var(--secondary-color);
+}
+
+
+.list-product__title {
+    text-transform: uppercase;
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: calc(var(--font-size-base) + 8px);
+}
+
+
+
+/* css phần tìm sản phẩm */
+
+
+/* css phần footer */
+
+.footer__container {
+    padding: 40px 0px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.footer__column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.footer__title {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: var(--color-black);
+}
+
+.footer__contact {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer__contact p {
+    white-space: nowrap;
+}
+
+.footer__contact span {
+    font-size: 14px;
+}
+
+.contact__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__branch {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+.footer__calendar {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-title__service {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.footer__service {
+    list-style: decimal;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer__service>li>a {
+    color: var(--color-black);
+}
+
+.footer-icon__social {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px
+}
+
+.logo__partner {
+    width: 70%;
+    aspect-ratio: 137 / 43;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+}
+
+.res-discount{
+    flex-direction: column;
+    gap: 10px;
+}
+
+.res-discount input{ 
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    background-color: var(--background-color);
+}
+
+.res-discount span{
+    padding: 20px 0px 10px 0px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+    color: var(--black-color);
+    font-size: var(--font-size-base);
+}
+
+.btn-res{
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    text-transform: uppercase;
+    color: var(--color-white);
+    align-items: center;
+    justify-content: center;
+    font-size: calc(var(--font-size-base) - 2px);
+}

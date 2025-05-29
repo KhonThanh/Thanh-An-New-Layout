@@ -1,0 +1,65 @@
+:root {
+  --primary-color: #283373;
+  --secondary-color: #E34A19;
+  --background-color: #F2F4F7;
+  --color-white: #ffffff;
+  --color-black: #252525;
+  --color-gray: #575757;
+  --font-size-base: 16px;
+  --font-name: Roboto, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  caret-color: transparent;
+}
+
+body {
+  font-family: var(--font-name);
+  background-color: var(--background-color);
+  overflow-x: hidden;
+}
+
+section {
+  justify-content: center;
+  margin: 15px 0px;
+}
+
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0px;
+  margin: 0px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-black);
+  cursor: pointer;
+}
+
+a:hover {
+  color: var(--secondary-color);
+}
+
+.img-config {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}
+
+input,
+textarea,
+[contenteditable="true"] {
+  caret-color: auto;
+}

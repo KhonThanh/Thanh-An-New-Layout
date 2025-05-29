@@ -1,0 +1,20 @@
+/* css responsive size > 768px */
+@media screen and (max-width: 768px) {
+
+    .header-bar__item:nth-child(2)>p,
+    .header-bar__item:nth-of-type(n+3) {
+        display: none;
+    }
+
+    body .custom-grid__bestproduct {
+        grid-template-columns: 1fr;
+    }
+
+    body .dropdown-wrapper {
+        display: block ;
+    }
+
+    body .listmenu-brandandsize {
+        display: none ;
+    }
+}
