@@ -201,7 +201,7 @@
 .footer-icon__social {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 5px
+    gap: 5px;
 }
 
 .logo__partner {
