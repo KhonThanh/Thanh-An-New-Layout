@@ -85,4 +85,38 @@ $(document).ready(function () {
   }
 });
 
+//  kiểm tra phần danh mục
+document.addEventListener("DOMContentLoaded", function () {
+  const content = document.querySelector(".article-content");
+  const tocList = document.querySelector(".toc-list");
+  const tocToggle = document.querySelector(".toc-toggle");
+  const tocWrapper = document.querySelector(".toc-wrapper");
 
+  // ✅ Kiểm tra đủ 4 phần tử mới chạy
+  if (!content || !tocList || !tocToggle || !tocWrapper) return;
+
+  const headings = content.querySelectorAll("h1, h2, h3, h4, h5, h6");
+
+  headings.forEach((heading) => {
+    const rawText = heading.innerText.trim();
+
+    // ✅ Chuyển sang ID không dấu, cách bằng "-"
+    const id = rawText
+      .normalize("NFD")                     // tách dấu
+      .replace(/[\u0300-\u036f]/g, "")     // xoá dấu tiếng Việt
+      .toLowerCase()
+      .replace(/[^a-z0-9\s-]/g, "")        // xoá ký tự đặc biệt
+      .replace(/\s+/g, "-")                // khoảng trắng → "-"
+      .replace(/-+/g, "-");                // gộp dấu -
+
+    heading.id = id;
+
+    const li = document.createElement("li");
+    li.innerHTML = `<a href="#${id}">${heading.innerText}</a>`;
+    tocList.appendChild(li);
+  });
+
+  tocToggle.addEventListener("click", function () {
+    tocWrapper.classList.toggle("show");
+  });
+});

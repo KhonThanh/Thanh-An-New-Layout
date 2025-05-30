@@ -79,6 +79,14 @@
     body .bestsell-product__item {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    body .news-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    body .custom-news__bar {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media screen and (max-width:600px) and (min-width: 426px) {
@@ -149,5 +157,26 @@
 
     body .container-cmt__avatar img {
         width: 20%;
+    }
+
+    body .news-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .nav-bar a:last-child {
+        max-width: 120px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    body .custom-news__bar {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    body .brand-product__container {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
