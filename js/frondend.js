@@ -7,22 +7,58 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!file) return;
 
     try {
-      const response = await fetch(file);
-      if (!response.ok) throw new Error("File not found");
+      // Thêm timestamp để tránh cache + dùng no-store
+      const response = await fetch(`${file}?v=${Date.now()}`, { cache: "no-store" });
+      if (!response.ok) throw new Error(`Không tìm thấy file: ${file}`);
 
       const text = await response.text();
       el.innerHTML = text;
+
+      // ✅ Gọi lại hàm responsive nếu cần sau khi innerHTML xong
+      if (typeof initResponsive === "function") {
+        initResponsive(el); // hoặc truyền cả el nếu muốn scoped
+      }
+
     } catch (err) {
-      el.innerHTML = `<p style="color: red;">Không tải được file: ${file}</p>`;
-      console.error(err);
+      el.innerHTML = `
+        <div style="color: red; padding: 1rem; background: #fff0f0; border: 1px solid red;">
+          ⚠ Không tải được component: <strong>${file}</strong>
+        </div>
+      `;
+      console.error("Lỗi khi fetch:", file, err);
     }
   });
 });
 
+// js thêm width và height vào bất kì thẻ img
+document.addEventListener("DOMContentLoaded", function () {
+  const images = document.querySelectorAll("img");
+
+  images.forEach((img) => {
+    // Nếu ảnh đã load rồi thì gán trực tiếp
+    if (img.complete) {
+      setDimensions(img);
+    } else {
+      // Nếu chưa load, chờ load xong rồi mới xử lý
+      img.addEventListener("load", function () {
+        setDimensions(img);
+      });
+    }
+  });
+
+  function setDimensions(img) {
+    if (!img.hasAttribute("width")) {
+      img.setAttribute("width", img.naturalWidth);
+    }
+    if (!img.hasAttribute("height")) {
+      img.setAttribute("height", img.naturalHeight);
+    }
+  }
+});
 
 // js banner chỗ trang chủ
 $(document).ready(function () {
-  const $banner = $(".sidebar__banner");
+  const $banner = $(".slide-cmt");
 
   if ($banner.length) {
     const $images = $banner.children("div");
@@ -45,169 +81,8 @@ $(document).ready(function () {
       touchMove: false,
     });
   } else {
-    console.log("Không tìm thấy .sidebar__banner – Slick không khởi tạo.");
+    console.log("Không tìm thấy .slide-cmt – Slick không khởi tạo.");
   }
 });
 
-// js cho banner trang con
-$(document).ready(function () {
-  const $banner = $(".big__banner");
 
-  if ($banner.length) {
-    const $images = $banner.children("div");
-    const currentCount = $images.length;
-
-    if (currentCount < 2) {
-      const clonesNeeded = 3 - currentCount;
-
-      for (let i = 0; i < clonesNeeded; i++) {
-        const $clone = $images.eq(0).clone();
-        $banner.append($clone);
-      }
-    }
-    $banner.slick({
-      infinite: true,
-      speed: 500,
-      dots: false,
-      autoplay: true,
-      arrows: false,
-      touchMove: false,
-    });
-  } else {
-    console.log("Không tìm thấy .big__banner – Slick không khởi tạo.");
-  }
-});
-
-// js cho phần sản phẩm
-
-$(document).ready(function () {
-  const $banner = $(".bestprice-slide__product");
-
-  if ($banner.length) {
-    const $images = $banner.children("div");
-    const currentCount = $images.length;
-
-    if (currentCount < 2) {
-      const clonesNeeded = 6 - currentCount;
-
-      for (let i = 0; i < clonesNeeded; i++) {
-        const $clone = $images.eq(0).clone();
-        $banner.append($clone);
-      }
-    }
-    $banner.slick({
-      infinite: true,
-      slidesToShow: 5,
-      slidesToScroll: 3,
-      speed: 500,
-      dots: false,
-      autoplay: true,
-      arrows: false,
-      touchMove: false,
-      responsive: [
-        {
-          breakpoint: 1120,
-          settings: {
-            slidesToShow: 4,
-            slidesToScroll: 3,
-          }
-        },
-        {
-          breakpoint: 761,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 3,
-          }
-        }
-      ]
-    });
-  } else {
-    console.log("Không tìm thấy .sidebar__banner – Slick không khởi tạo.");
-  }
-});
-
-// js cho phần header
-
-$(document).ready(function () {
-  const $banner = $(".top-bar__content");
-
-  if ($banner.length) {
-    $banner.slick({
-      infinite: true,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      speed: 500,
-      dots: false,
-      autoplay: true,
-      arrows: false,
-      touchMove: false,
-    });
-  } else {
-    console.log("Không tìm thấy .top-bar__content – Slick không khởi tạo.");
-  }
-});
-
-// js gán witdh và height vào bất kì img nào
-document.addEventListener("DOMContentLoaded", () => {
-  const updateSize = (img) => {
-    if (!(img instanceof HTMLImageElement)) return;
-
-    const isSVG = img.src.endsWith(".svg");
-    if (!img.hasAttribute("width") || !img.hasAttribute("height")) {
-      if (img.complete) {
-        if (!isSVG) {
-          img.setAttribute("width", img.naturalWidth);
-          img.setAttribute("height", img.naturalHeight);
-        }
-      } else {
-        img.addEventListener(
-          "load",
-          () => {
-            if (!isSVG) {
-              img.setAttribute("width", img.naturalWidth);
-              img.setAttribute("height", img.naturalHeight);
-            }
-          },
-          { once: true }
-        );
-      }
-    }
-  };
-
-  // ✅ Quét tất cả ảnh trong toàn bộ trang
-  const allImages = document.querySelectorAll("img");
-  if (allImages.length === 0) {
-    console.warn("⚠️ Không phát hiện ảnh nào trên trang!");
-  }
-
-  allImages.forEach(updateSize);
-
-  // ✅ Quan sát toàn bộ body, bao luôn header, footer, main...
-  const observer = new MutationObserver((mutations) => {
-    mutations.forEach((mutation) => {
-      if (mutation.type === "childList") {
-        mutation.addedNodes.forEach((node) => {
-          if (node.tagName === "IMG") {
-            updateSize(node);
-          } else if (node.querySelectorAll) {
-            node.querySelectorAll("img").forEach(updateSize);
-          }
-        });
-      } else if (
-        mutation.type === "attributes" &&
-        mutation.target.tagName === "IMG" &&
-        mutation.attributeName === "src"
-      ) {
-        updateSize(mutation.target);
-      }
-    });
-  });
-
-  // 🔁 Quan sát toàn bộ body để bắt mọi thay đổi ảnh
-  observer.observe(document.body, {
-    childList: true,
-    subtree: true,
-    attributes: true,
-    attributeFilter: ["src"],
-  });
-});

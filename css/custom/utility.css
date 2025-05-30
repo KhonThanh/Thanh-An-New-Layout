@@ -8,6 +8,7 @@
 .bg-primary { background-color: var(--primary-color); }
 .bg-secondary { background-color: var(--secondary-color); }
 .bg-gray { background-color: var(--color-gray); }
+.bg-cream { background-color: var(--secondaty-background-color);}
 
 .rounded { border-radius: 10px; }
 .rounded-full { border-radius: 999px; }
@@ -15,7 +16,6 @@
 
 .flex { display: flex; }
 .grid { display: grid; }
-.center
 .center { justify-content: center; align-items: center; }
 
 .uppercase { text-transform: uppercase; }

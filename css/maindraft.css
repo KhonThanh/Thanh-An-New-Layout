@@ -1048,10 +1048,13 @@ select:focus {
     font-weight: 450;
     color: var(--color-black);
     background-color: rgba(0, 0, 0, 0.3);
-    transition:
-        color 0.4s ease,
-        background-color 0.4s ease,
-        transform 0.3s ease;
+    transition: transform 0.4s ease, border-color 0.4s ease;
+}
+
+.product-tag:hover {
+    filter: brightness(1.5);
+    transform: scale(1.05);
+    border-color: var(--secondary-color);
 }
 
 /* css brand logo */
@@ -1483,7 +1486,7 @@ select:focus {
         font-size: 18px;
     }
 
-    .category-tag{
+    .category-tag {
         gap: 10px
     }
 
@@ -1835,11 +1838,12 @@ select:focus {
         display: flex;
         flex-direction: column;
     }
-    .container_function{
+
+    .container_function {
         grid-template-columns: repeat(2, 28px);
     }
 
-    .brand__title{
+    .brand__title {
         font-size: 24px;
     }
 }
@@ -1855,7 +1859,7 @@ select:focus {
         font-size: 24px;
     }
 
-    .container_function{
+    .container_function {
         grid-template-columns: repeat(2, 28px);
     }
 
@@ -1867,16 +1871,18 @@ select:focus {
     .news-vertical {
         grid-template-columns: 1fr;
     }
-    .brand-btn__function{
+
+    .brand-btn__function {
         flex-direction: column;
         gap: 10px;
     }
-    .category-product__header{
+
+    .category-product__header {
         white-space: wrap;
         font-size: 16px;
     }
 
-    .popular-products__title{
+    .popular-products__title {
         font-size: 16px;
     }
 }

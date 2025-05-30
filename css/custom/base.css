@@ -1,7 +1,8 @@
 :root {
   --primary-color: #283373;
-  --secondary-color: #E34A19;
+  --secondary-color: #F17C2C;
   --background-color: #F2F4F7;
+  --secondaty-background-color: #FFF3E3;
   --color-white: #ffffff;
   --color-black: #252525;
   --color-gray: #575757;
@@ -24,7 +25,7 @@ body {
 
 section {
   justify-content: center;
-  margin: 15px 0px;
+  margin: 30px 0px;
 }
 
 ul {
@@ -45,10 +46,6 @@ a {
   text-decoration: none;
   color: var(--color-black);
   cursor: pointer;
-}
-
-a:hover {
-  color: var(--secondary-color);
 }
 
 .img-config {

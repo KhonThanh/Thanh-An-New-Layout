@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <header data-include="header.html" class="header-bar bg-primary"></header>
+    <header data-include="component/header.html" class="header-bar bg-primary"></header>
     <main>
         <section class="flex">
             <div class="container grid custom-grid__bestproduct">
@@ -125,10 +125,206 @@
                 </div>
             </div>
         </section>
-        <section data-include="category-product.html"></section>
-        <section data-include="brandlogo.html"></section>
+        <section class="flex center bg-primary">
+            <div class="bg-white grid container contaner-find">
+                <div class="flex center contaner-find__img">
+                    <img src="./img/icon-social-network/car.svg" alt="">
+                </div>
+                <div class=" flex find-allelement">
+                    <h3>tìm kiếm võ cũ theo xe tại đây</h3>
+                    <div class="flex radio-choose">
+                        <label>
+                            <input type="radio" name="searchType" value="car" checked> Theo xe
+                        </label>
+                        <label>
+                            <input type="radio" name="searchType" value="size"> Theo size
+                        </label>
+                    </div>
+                    <a title="help" href="#" class="flex help-custom">
+                        <img src="./img/icon-social-network/question.png" alt="Icon chấm hỏi">
+                        Tôi có thể giúp gi được cho bạn, hãy liên hệ với chúng tôi
+                    </a>
+                    <div class="grid container-option">
+                        <select id="searchOption" class="dropdown-select">
+                            <option value="">-- Chọn xe hoặc size --</option>
+                            <option value="innova">Toyota Innova</option>
+                            <option value="morning">Kia Morning</option>
+                            <option value="185/65R15">185/65R15</option>
+                            <option value="195/60R16">195/60R16</option>
+                        </select>
+                        <select id="searchOption" class="dropdown-select">
+                            <option value="">-- Chọn xe hoặc size --</option>
+                            <option value="innova">Toyota Innova</option>
+                            <option value="morning">Kia Morning</option>
+                            <option value="185/65R15">185/65R15</option>
+                            <option value="195/60R16">195/60R16</option>
+                        </select>
+                        <button title="tìm kiếm" class="flex center bg-primary btn-find">
+                            <img src="./img/icon-social-network/search-white.png" alt="">
+                            tìm kiếm
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="flex center">
+            <div class="container flex center bestsell-product">
+                <h3 class="bestsell-product__title">õ cũ bán chay</h3>
+                <div class="grid bestsell-product__item">
+                    <a href="#" class="product__container">
+                        <div class=" flex product-container__item">
+                            <img class="img-config" src="./img/product-tire/SP1.svg" alt="">
+                            <p>võ lốp maxxis 205/65R16</p>
+                            <p>250.000 VNĐ</p>
+                        </div>
+                    </a>
+                    <a href="#" class="product__container">
+                        <div class=" flex product-container__item">
+                            <img class="img-config" src="./img/product-tire/SP2.svg" alt="">
+                            <p>võ lốp maxxis 205/65R16</p>
+                            <p>250.000 VNĐ</p>
+                        </div>
+                    </a>
+                    <a href="#" class="product__container">
+                        <div class=" flex product-container__item">
+                            <img class="img-config" src="./img/product-tire/SP3.svg" alt="">
+                            <p>võ lốp maxxis 205/65R16</p>
+                            <p>250.000 VNĐ</p>
+                        </div>
+                    </a>
+                    <a href="#" class="product__container">
+                        <div class=" flex product-container__item">
+                            <img class="img-config" src="./img/product-tire/SP3.svg" alt="">
+                            <p>võ lốp maxxis 205/65R16</p>
+                            <p>250.000 VNĐ</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="flex center">
+            <div class="container grid bg-white section-choose">
+                <div class="flex section-choose__contact">
+                    <img title="img choose part" src="./img/news/choose.png" alt="">
+                    <button class="bg-primary flex center section-choose__btn">
+                        <img src="./img/icon-social-network/PHONE.png" alt="">
+                        tư vấn hỗ trợ lốp
+                    </button>
+                </div>
+                <div class="flex section-choose__contact choose-custom">
+                    <span>Tiêu chí tuyển chọn vỏ xe cũ từ</span>
+                    <div class="flex choose-container__content">
+                        <p>Chuyên gia</p>
+                        <h3>Cao nhân</h3>
+                    </div>
+                    <p>Mỗi chiếc vỏ cũ trước khi đến tay bạn đều dược đích thân tôi sẽ kiểm tra va đánh giá tỉ mỉ dựa
+                        trên 8 tiêu chí cốt lỗi, đảm bảo an toàn tối đa và hiệu suất vận hành tối ưu</p>
+                    <ul class="grid section-choose__list">
+                        <li class="flex choose-list__custom">
+                            <img src="./img/icon-social-network/CIRCLE-CHECK.svg" alt="">
+                            <p>Độ sâu và tình trạng gai vỏ</p>
+                        </li>
+                        <li class="flex choose-list__custom">
+                            <img src="./img/icon-social-network/CIRCLE-CHECK.svg" alt="">
+                            <p>Độ sâu và tình trạng gai vỏ</p>
+                        </li>
+                        <li class="flex choose-list__custom">
+                            <img src="./img/icon-social-network/CIRCLE-CHECK.svg" alt="">
+                            <p>Độ sâu và tình trạng gai vỏ</p>
+                        </li>
+                        <li class="flex choose-list__custom">
+                            <img src="./img/icon-social-network/CIRCLE-CHECK.svg" alt="">
+                            <p>Độ sâu và tình trạng gai vỏ</p>
+                        </li>
+                        <li class="flex choose-list__custom">
+                            <img src="./img/icon-social-network/CIRCLE-CHECK.svg" alt="">
+                            <p>Độ sâu và tình trạng gai vỏ</p>
+                        </li>
+                        <li class="flex choose-list__custom">
+                            <img src="./img/icon-social-network/CIRCLE-CHECK.svg" alt="">
+                            <p>Độ sâu và tình trạng gai vỏ</p>
+                        </li>
+                        <li class="flex choose-list__custom">
+                            <img src="./img/icon-social-network/CIRCLE-CHECK.svg" alt="">
+                            <p>Độ sâu và tình trạng gai vỏ</p>
+                        </li>
+                        <li class="flex choose-list__custom">
+                            <img src="./img/icon-social-network/CIRCLE-CHECK.svg" alt="">
+                            <p>Độ sâu và tình trạng gai vỏ</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="bg-cream flex center">
+            <div class="container flex center container-cmt">
+                <button title="function btn cmt" class="btn-cmt" id="btn-cmt__next">
+                    <img title="icon chevron-left" src="./img/icon-social-network/chevron-left.png" alt="">
+                </button>
+                <div class="slide-cmt">
+                    <div>
+                        <div class="flex container-cmt__custom">
+                            <h3 class="container-cmt__title">
+                                đánh giá từ các bác tài từng mua vỏ cũ
+                            </h3>
+                            <div class=" flex container-cmt__avatar">
+                                <img src="./img/icon-social-network/avatar.png" alt="avatar người dùng">
+                                <div class="flex container-cmt__info">
+                                    <p>Anh Duy quận 7</p>
+                                    <div class="flex container-cmt__rank">
+                                        <img src="./img/icon-social-network/star.png" alt="">
+                                        <img src="./img/icon-social-network/star.png" alt="">
+                                        <img src="./img/icon-social-network/star.png" alt="">
+                                        <img src="./img/icon-social-network/star.png" alt="">
+                                        <img src="./img/icon-social-network/star.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <p>
+                                Xe bị tét lớp, nhưng chưa đủ chi phí thay có ghé qua Thanh An , được anh Nhân tư vấn
+                                nhanh
+                                gọn chọn vỏ cũ gai còn khoản 20% giá mềm. Về chạy vài ngày cũng khá ổn, khi nào thay lốp
+                                mới
+                                sẽ ghé lại
+                            </p>
+                        </div>
+                    </div>
+                    
+                </div>
+                <button title="function btn cmt" class="btn-cmt" id="btn-cmt__prev">
+                    <img title="icon chevron-left" src="./img/icon-social-network/chevron-right.png" alt="">
+                </button>
+            </div>
+        </section>
+        <section class="flex center">
+            <div class="grid bg-white container res-product">
+                <div class="res-product__img">
+                    <img title="hình quảng cáo phần sản phẩm đăng ký" src="./img/news/image-quangcao.png" alt="">
+                </div>
+                <div class="flex center res-product">
+                    <h3>tìm kiếm võ cũ theo xe tại đây</h3>
+                    <input type="text" class="dropdown-select res-product__input " placeholder="Họ và tên">
+                    <input type="text" class="dropdown-select res-product__input " placeholder="Số điện thoại">
+                    <select id="searchOption" class="dropdown-select res-product__input">
+                        <option value="">Anh / chị cần tư vấn</option>
+                        <option value="innova">Toyota Innova</option>
+                        <option value="morning">Kia Morning</option>
+                        <option value="185/65R15">185/65R15</option>
+                        <option value="195/60R16">195/60R16</option>
+                    </select>
+
+                    <button title="tìm kiếm" class="flex center bg-primary btn-find ">
+                        <img src="./img/icon-social-network/search-white.png" alt="">
+                        gửi ngay
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section class="flex center" data-include="component/newsusefull.html"></section>
+        <!-- <section data-include="category-product.html"></section> -->
+        <section class="flex center" data-include="component/brandlogo.html"></section>
     </main>
-    <footer data-include="footer.html" class="background-color__white"></footer>
+    <footer data-include="component/footer.html" class="bg-white"></footer>
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
