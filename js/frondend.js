@@ -7,16 +7,14 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!file) return;
 
     try {
-      // Thêm timestamp để tránh cache + dùng no-store
       const response = await fetch(`${file}?v=${Date.now()}`, { cache: "no-store" });
       if (!response.ok) throw new Error(`Không tìm thấy file: ${file}`);
 
       const text = await response.text();
       el.innerHTML = text;
 
-      // ✅ Gọi lại hàm responsive nếu cần sau khi innerHTML xong
       if (typeof initResponsive === "function") {
-        initResponsive(el); // hoặc truyền cả el nếu muốn scoped
+        initResponsive(el); 
       }
 
     } catch (err) {
@@ -35,11 +33,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const images = document.querySelectorAll("img");
 
   images.forEach((img) => {
-    // Nếu ảnh đã load rồi thì gán trực tiếp
     if (img.complete) {
       setDimensions(img);
     } else {
-      // Nếu chưa load, chờ load xong rồi mới xử lý
       img.addEventListener("load", function () {
         setDimensions(img);
       });
@@ -92,7 +88,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const tocToggle = document.querySelector(".toc-toggle");
   const tocWrapper = document.querySelector(".toc-wrapper");
 
-  // ✅ Kiểm tra đủ 4 phần tử mới chạy
   if (!content || !tocList || !tocToggle || !tocWrapper) return;
 
   const headings = content.querySelectorAll("h1, h2, h3, h4, h5, h6");
@@ -100,14 +95,13 @@ document.addEventListener("DOMContentLoaded", function () {
   headings.forEach((heading) => {
     const rawText = heading.innerText.trim();
 
-    // ✅ Chuyển sang ID không dấu, cách bằng "-"
     const id = rawText
-      .normalize("NFD")                     // tách dấu
-      .replace(/[\u0300-\u036f]/g, "")     // xoá dấu tiếng Việt
+      .normalize("NFD")                    
+      .replace(/[\u0300-\u036f]/g, "")     
       .toLowerCase()
-      .replace(/[^a-z0-9\s-]/g, "")        // xoá ký tự đặc biệt
-      .replace(/\s+/g, "-")                // khoảng trắng → "-"
-      .replace(/-+/g, "-");                // gộp dấu -
+      .replace(/[^a-z0-9\s-]/g, "")        
+      .replace(/\s+/g, "-")                
+      .replace(/-+/g, "-");                
 
     heading.id = id;
 
@@ -118,5 +112,36 @@ document.addEventListener("DOMContentLoaded", function () {
 
   tocToggle.addEventListener("click", function () {
     tocWrapper.classList.toggle("show");
+  });
+});
+
+// js hiển thị cmt khi quá 4 hoặc ẩn đi
+// js mở đóng popup đánh giá
+function openReviewPopup() {
+  document.getElementById('popupReview').style.display = 'block';
+}
+
+function closePopup() {
+  document.getElementById('popupReview').style.display = 'none';
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  const popup = document.getElementById('popupReview');
+  if (popup) {
+    popup.addEventListener('click', function (e) {
+      if (e.target.classList.contains('popup-overlay')) {
+        closePopup();
+      }
+    });
+  }
+});
+
+const stars = document.querySelectorAll('.popup-stars .star');
+stars.forEach(star => {
+  star.addEventListener('click', function () {
+    const value = this.dataset.value;
+    stars.forEach(s => {
+      s.classList.toggle('active', s.dataset.value <= value);
+    });
   });
 });

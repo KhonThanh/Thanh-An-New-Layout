@@ -3,6 +3,10 @@
     body .section-choose {
         grid-template-columns: 1fr;
     }
+
+    body .old-tire__title {
+        font-size: calc(var(--font-size-base) + 5px);
+    }
 }
 
 @media screen and (max-width: 973px) and (min-width: 769px) {
@@ -20,6 +24,11 @@
 
     body .res-product {
         padding: 10px;
+    }
+
+    body .filter-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
     }
 }
 
@@ -73,6 +82,7 @@
         border-radius: 100%;
     }
 
+
 }
 
 @media screen and (max-width: 768px) and (min-width: 426px) {
@@ -86,6 +96,15 @@
 
     body .custom-news__bar {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    body .filter-container {
+        grid-template-columns: 1fr ;
+        gap: 10px;
+    }
+
+    body .all-product__container{
+        grid-template-columns: repeat(3,1fr);
     }
 }
 
@@ -178,5 +197,18 @@
 
     body .brand-product__container {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    body .btn-share {
+        padding: 5px 10px;
+    }
+
+    body .filter-container {
+        grid-template-columns: 1fr ;
+        gap: 10px;
+    }
+
+    body .all-product__container{
+        grid-template-columns: repeat(2,1fr);
     }
 }
