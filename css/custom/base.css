@@ -17,6 +17,11 @@
   caret-color: transparent;
 }
 
+header{
+  position: relative;
+  z-index: 1;
+}
+
 body {
   font-family: var(--font-name);
   background-color: var(--background-color);
