@@ -42,6 +42,15 @@
     gap: 20px;
 }
 
+.find-tire {
+    font-size: calc(var(--font-size-base));
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
 .listmenu-brandandsize {
     background-color: var(--color-white);
     padding: 20px;
@@ -56,18 +65,12 @@
 
 .menulist__tire {
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
 }
 
-.old-tire__title,
-.menulist__tire p {
+.old-tire__title {
     text-transform: uppercase;
     font-weight: bold;
-}
-
-.menulist__tire p {
-    padding-bottom: 5px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 
@@ -193,15 +196,13 @@
 
 .dropdown-select {
     padding: 10px 36px 10px 12px;
-    /* Đẩy nội dung và mũi tên */
     border: 1px solid #ccc;
     appearance: none;
-    /* Ẩn mũi tên mặc định */
     -webkit-appearance: none;
     -moz-appearance: none;
     background: url("data:image/svg+xml;utf8,<svg fill='black' height='14' viewBox='0 0 24 24' width='14' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>") no-repeat right 12px center;
-    background-color: white;
-    background-size: 14px;
+    background-color: var(--color-white);
+    background-size: calc(var(--font-size-base) - 2px);
 }
 
 .btn-find {
@@ -210,6 +211,112 @@
     gap: 10px;
     text-transform: uppercase;
 }
+
+/* css phần sản phẩm chi tiết */
+
+.productdetail-container {
+    grid-template-columns: 40% 1fr;
+    padding: 20px;
+    gap: 20px;
+}
+
+.productdetail-img{
+    width: 100vw;
+}
+
+.productdetail-info {
+    flex-direction: column;
+    gap: 20px;
+}
+
+.productdetail-info h2{
+    text-transform: uppercase;
+    font-size: calc(var(--font-size-base) + 2px);
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.productdetail-title {
+    text-transform: uppercase;
+    font-size: calc(var(--font-size-base) + 12px);
+    color: var(--primary-color);
+    font-weight: bold;
+}
+.productdetail-status,
+.productdetail-brand {
+    gap: 10px;
+    align-items: center;
+}
+
+.productdetail-rank {
+    gap: 8px;
+}
+
+.productdetail-price {
+    align-items: right;
+    gap: 20px;
+}
+
+.productdetail-price p{
+    font-weight: bold;
+    font-size: calc(var(--font-size-base) * 2);
+    color: var(--secondary-color);
+}
+
+.productdetail-price span{
+    font-size: calc(var(--font-size-base)) - 2px;
+    color: var(--color-black);
+    font-weight: 100;
+    text-decoration: line-through;
+}
+
+.productdetail-sales {
+    font-size: calc(var(--font-size-base) - 2px);
+    gap: 10px;
+    flex-direction: row;
+}
+
+.productdetail-voucher {
+    flex-direction: column;
+    gap: 10px;
+}
+
+.voucher-list {
+    margin-left: 20px;
+    list-style: disc;
+}
+
+.productdetail-quantity {
+    flex-direction: column;
+    gap: 10px;
+}
+
+.quantity-container{
+    border: 1px solid var(--primary-color);
+    padding: 10px 20px;
+    width: fit-content;
+    gap: 20px;
+}
+
+.quantity-container button{
+    background-color: transparent;
+    color: var(--primary-color);
+    border: none;
+    font-size: var(--font-size-base);
+    cursor: pointer;
+}
+
+.btn {
+    cursor: pointer;
+    width: fit-content;
+    padding: 10px 20px;
+    border: none;
+    gap: 20px;
+    color: var(--color-white);
+    font-size: var(--font-size-base);
+}
+
+
 
 /* css lốp bán chạy */
 
@@ -287,7 +394,6 @@
 
 
 /* css phần brand logo */
-
 
 .brand-logo {
     border-radius: 10px;
@@ -585,7 +691,7 @@
 .news-content__container {
     flex-direction: column;
     gap: 20px;
-    padding: 20px 0px;
+    padding: 20px 20px;
     align-items: center;
 }
 
@@ -1089,9 +1195,24 @@
 }
 
 .filter-container {
-    grid-template-columns: 1fr 1fr 0.7fr;
+    grid-template-columns: repeat(6, 1fr);
+    align-items: center;
     gap: 10px;
 }
+
+.filter-container span {
+    font-size: var(--font-size-base);
+}
+
+.dropdown-custom {
+    gap: 10px;
+}
+
+.dropdown-custom select {
+    flex-grow: 1;
+}
+
+
 
 .filter-element {
     grid-template-columns: repeat(3, 1fr);
@@ -1099,12 +1220,12 @@
     align-items: center;
 }
 
-.filter-element span{
+.filter-element span {
     font-size: var(--font-size-base);
 }
 
-.all-product__container{
-    grid-template-columns: repeat(4 , 1fr);
+.all-product__container {
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
 }
 

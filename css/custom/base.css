@@ -60,3 +60,14 @@ textarea,
 [contenteditable="true"] {
   caret-color: auto;
 }
+
+input, select, textarea {
+  outline: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.2);
+}
