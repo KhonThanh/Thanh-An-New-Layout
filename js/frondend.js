@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
       el.innerHTML = text;
 
       if (typeof initResponsive === "function") {
-        initResponsive(el); 
+        initResponsive(el);
       }
 
     } catch (err) {
@@ -96,12 +96,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const rawText = heading.innerText.trim();
 
     const id = rawText
-      .normalize("NFD")                    
-      .replace(/[\u0300-\u036f]/g, "")     
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
       .toLowerCase()
-      .replace(/[^a-z0-9\s-]/g, "")        
-      .replace(/\s+/g, "-")                
-      .replace(/-+/g, "-");                
+      .replace(/[^a-z0-9\s-]/g, "")
+      .replace(/\s+/g, "-")
+      .replace(/-+/g, "-");
 
     heading.id = id;
 
@@ -164,29 +164,92 @@ $('.slider-nav').slick({
   dots: false,
   centerMode: true,
   focusOnSelect: true,
-  arrows:false,
+  arrows: false,
 });
 
 // mở và đong cái menu mobile
-function openMenuMobile(){
+function openMenuMobile() {
   document.getElementById('menuMobile').style.display = 'block';
 }
 
-function closeMenu(){
-  document.getElementById('menuMobile').style.display ='none';
+function closeMenu() {
+  document.getElementById('menuMobile').style.display = 'none';
 }
 
-document.addEventListener('click', function(event) {
-  if (!document.getElementById('menuMobile')) return; // chưa có component
-
+document.addEventListener('click', function (event) {
   const menuMobile = document.getElementById('menuMobile');
   const menuMobileContent = document.getElementById('menuMobileContent');
+  const tabs = document.querySelectorAll('.nav__icon-item');
+  const contents = document.querySelectorAll('.mobile-menu__list'); // sửa tên class
 
+  if (!menuMobile || !menuMobileContent || !tabs.length || !contents.length) return;
+
+  // Xử lý click vào tab
+  tabs.forEach(tab => {
+    tab.addEventListener('click', function () {
+      const tabNum = this.getAttribute('data-tab'); // khai báo biến
+
+      tabs.forEach(t => t.classList.remove('active'));
+      this.classList.add('active');
+
+      contents.forEach(content => {
+        if (content.getAttribute('data-tab') === tabNum) {
+          content.classList.add('active');
+        } else {
+          content.classList.remove('active');
+        }
+      });
+    });
+  });
+
+  // Xử lý click ra ngoài content để đóng menu
   if (menuMobile.contains(event.target)) {
     if (menuMobileContent.contains(event.target)) {
       console.log('Bạn vừa bấm vào phần nội dung menu');
     } else {
-      closeMenu();
+      closeMenu(); // bồ nhớ định nghĩa hàm này ở đâu đó
     }
   }
 });
+
+// js phần thông báo nếu input trống
+document.addEventListener('DOMContentLoaded', function () {
+  const wrapper = document.querySelector('.res-product');
+  if (!wrapper) return; // Không có .res-product thì thoát luôn
+
+  const nameInput = document.querySelector('input[placeholder="Họ và tên"]');
+  const phoneInput = document.querySelector('input[placeholder="Số điện thoại"]');
+  const sendButton = document.getElementById('findProduct');
+
+  if (nameInput && phoneInput && sendButton) {
+    sendButton.addEventListener('click', function (e) {
+      e.preventDefault();
+      let isValid = true;
+
+      if (!nameInput.value.trim()) {
+        nameInput.value = '';
+        nameInput.placeholder = "mời bạn điền thông tin";
+        nameInput.classList.add('input-error');
+        isValid = false;
+      } else {
+        nameInput.classList.remove('input-error');
+      }
+
+      if (!phoneInput.value.trim()) {
+        phoneInput.value = '';
+        phoneInput.placeholder = "mời bạn điền thông tin điện thoại";
+        phoneInput.classList.add('input-error');
+        isValid = false;
+      } else {
+        phoneInput.classList.remove('input-error');
+      }
+
+      if (isValid) {
+        console.log("Gửi form thành công!");
+      }
+    });
+  } else {
+    console.warn('Thiếu input hoặc nút gửi — kiểm tra lại HTML.');
+  }
+});
+
