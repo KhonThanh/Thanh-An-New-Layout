@@ -136,6 +136,8 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
+
+
 const stars = document.querySelectorAll('.popup-stars .star');
 stars.forEach(star => {
   star.addEventListener('click', function () {
@@ -163,4 +165,28 @@ $('.slider-nav').slick({
   centerMode: true,
   focusOnSelect: true,
   arrows:false,
+});
+
+// mở và đong cái menu mobile
+function openMenuMobile(){
+  document.getElementById('menuMobile').style.display = 'block';
+}
+
+function closeMenu(){
+  document.getElementById('menuMobile').style.display ='none';
+}
+
+document.addEventListener('click', function(event) {
+  if (!document.getElementById('menuMobile')) return; // chưa có component
+
+  const menuMobile = document.getElementById('menuMobile');
+  const menuMobileContent = document.getElementById('menuMobileContent');
+
+  if (menuMobile.contains(event.target)) {
+    if (menuMobileContent.contains(event.target)) {
+      console.log('Bạn vừa bấm vào phần nội dung menu');
+    } else {
+      closeMenu();
+    }
+  }
 });

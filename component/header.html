@@ -4,7 +4,7 @@
             <img class="logo" width="195" height="87" src="./img/logo+about/logo.png" alt="">
         </a>
     </div>
-    <div class="header-bar__item flex custom-list">
+    <div class="header-bar__item flex custom-list" onclick="openMenuMobile()">
         <img src="./img/icon-social-network/bar.svg" alt="">
         <p>Danh mục</p>
     </div>
@@ -26,8 +26,8 @@
         </div>
     </div>
 </div>
-<div class=" overlay menu-mobile">
-    <div class="flex bg-white menu-mobile__content ">
+<div class=" overlay menu-mobile" id="menuMobile" onclick="">
+    <div class="flex bg-white menu-mobile__content" id="menuMobileContent">
         <button class="popup-close" onclick="closeMenu()">×</button>
         <div class="grid mobile-menu">
             <div class="flex mobile-menu__nav-icons">
