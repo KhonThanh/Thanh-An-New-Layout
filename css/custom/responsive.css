@@ -94,6 +94,7 @@
 
     body .sectionmenu-status{
         display: block;
+        margin: 0;
     }
 
 }

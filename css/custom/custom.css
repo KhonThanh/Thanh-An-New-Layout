@@ -1620,7 +1620,7 @@
 
 .sectionmenu-status{
     position: fixed;
-    bottom: 2%;
+    bottom: 0;
     z-index: 99999;
     width: 100%;
     display: none;
