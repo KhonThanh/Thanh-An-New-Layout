@@ -10,6 +10,10 @@
   --font-name: Roboto, sans-serif;
 }
 
+main{
+  position: relative;
+}
+
 * {
   margin: 0;
   padding: 0;
