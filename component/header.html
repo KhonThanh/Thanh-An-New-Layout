@@ -4,12 +4,12 @@
             <img class="logo" width="195" height="87" src="./img/logo+about/logo.png" alt="">
         </a>
     </div>
+    <div class="header-bar__item flex" onclick="">
+        <p>Vỏ lốp cũ vì môi trường xanh</p>
+    </div>
     <div class="header-bar__item flex custom-list" onclick="openMenuMobile()">
         <img src="./img/icon-social-network/bar.svg" alt="">
         <p>Danh mục</p>
-    </div>
-    <div class="header-bar__item">
-        <p>Vỏ lốp cũ vì môi trường xanh</p>
     </div>
     <div class="header-bar__item flex">
         <img src="./img/icon-social-network/newiconphone.svg" alt="">
@@ -23,6 +23,47 @@
         <div class="content-contact">
             <p class="content-contact__title">Mạng lưới</p>
             <span>Giao hàng</span>
+        </div>
+    </div>
+    <button title="open function search" class="bg-primary  header-bar__item btn-search" onclick="openSearchFunction()">
+        <img src="/img/icon-social-network/search-white.png" alt="">
+        Tìm kiếm sản phẩm
+    </button>
+</div>
+<div class="flex center bg-white status-allelement" id="statusAllelement">
+    <div class="container flex find-allelement ">
+        <h3>tìm kiếm vỏ cũ theo xe tại đây</h3>
+        <div class="flex radio-choose">
+            <label>
+                <input type="radio" name="searchType" value="car" checked> Theo xe
+            </label>
+            <label>
+                <input type="radio" name="searchType" value="size"> Theo size
+            </label>
+        </div>
+        <a title="help" href="#" class="flex help-custom">
+            <img src="./img/icon-social-network/question.png" alt="Icon chấm hỏi">
+            Tôi có thể giúp gi được cho bạn, hãy liên hệ với chúng tôi
+        </a>
+        <div class="grid container-option">
+            <select id="searchCarTire" class="dropdown-select">
+                <option value="">-- Chọn xe hoặc size --</option>
+                <option value="innova">Toyota Innova</option>
+                <option value="morning">Kia Morning</option>
+                <option value="185/65R15">185/65R15</option>
+                <option value="195/60R16">195/60R16</option>
+            </select>
+            <select id="searchBrandTire" class="dropdown-select">
+                <option value="">-- Chọn xe hoặc size --</option>
+                <option value="innova">Toyota Innova</option>
+                <option value="morning">Kia Morning</option>
+                <option value="185/65R15">185/65R15</option>
+                <option value="195/60R16">195/60R16</option>
+            </select>
+            <button title="tìm kiếm" class="flex center bg-primary btn-find">
+                <img src="./img/icon-social-network/search-white.png" alt="">
+                tìm kiếm
+            </button>
         </div>
     </div>
 </div>

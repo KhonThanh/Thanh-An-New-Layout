@@ -172,6 +172,17 @@ function openMenuMobile() {
   document.getElementById('menuMobile').style.display = 'block';
 }
 
+function openSearchFunction() {
+  const el = document.getElementById('statusAllelement');
+  if (!el) return;
+
+  if (el.style.display === 'block') {
+    el.style.display = 'none';
+  } else {
+    el.style.display = 'block';
+  }
+}
+
 function closeMenu() {
   document.getElementById('menuMobile').style.display = 'none';
 }

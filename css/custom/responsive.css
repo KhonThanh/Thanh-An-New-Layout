@@ -97,6 +97,14 @@
         margin: 0;
     }
 
+    body .dropdown-select{
+        padding: 15px 36px 15px 12px;
+    }
+
+    body .find-allelement h3{
+        font-size: calc(var(--font-size-base) + 4px);
+    }
+
 }
 
 @media screen and (max-width: 768px) and (min-width: 426px) {
@@ -270,5 +278,9 @@
     }
     body .section-choose__list{
         grid-template-columns: 1fr;
+    }
+
+    body .btn-search{
+        padding: 10px;
     }
 }
