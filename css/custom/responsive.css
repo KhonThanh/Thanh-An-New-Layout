@@ -268,4 +268,7 @@
     body .contaner-find__img img{
         display: none;
     }
+    body .section-choose__list{
+        grid-template-columns: 1fr;
+    }
 }

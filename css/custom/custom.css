@@ -694,11 +694,16 @@
 
 .choose-list__custom {
     font-size: var(--font-size-base);
-    gap: 20px;
+    gap: 10px;
+    align-items: center;
 }
 
 .choose-container__content {
-    flex-direction: column;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    border-bottom: 1px solid var(--secondary-color);
+    padding-bottom: 10px;
 }
 
 /* css phần cmt */
