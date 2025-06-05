@@ -7,6 +7,10 @@
     body .old-tire__title {
         font-size: calc(var(--font-size-base) + 5px);
     }
+
+    body .header-bar__item{
+        min-width: 120px;
+    }
 }
 
 @media screen and (max-width: 1024px) and (min-width: 769px) {
@@ -154,15 +158,27 @@
         --font-size-base: 14px;
     }
 
+    body .header-bar__content{
+        min-height: 80px;
+    }
+
     body .logo {
         aspect-ratio: 16 / 8 ;
-        width: 60%;
+        width: 70%;
         height: auto;
     }
 
     body .brand-logo__list {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
+    }
+
+    body .choose-custom{
+        min-height: 553px;
+    }
+
+    body .header-bar__item{
+        min-width: 20px;
     }
 
     body .contaner-find {
@@ -282,5 +298,9 @@
 
     body .btn-search{
         padding: 10px;
+    }
+
+    body .information-title{
+        font-size: calc(var(--font-size-base) + 2px);
     }
 }
