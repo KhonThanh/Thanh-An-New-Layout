@@ -1660,3 +1660,15 @@
     width: 100%;
     display: none;
 }
+
+
+.hidden-section {
+	opacity: 0;
+	transform: translateY(40px);
+	transition: opacity 1s ease, transform 1s ease;
+}
+
+.show-up {
+	opacity: 1;
+	transform: translateY(0);
+}
