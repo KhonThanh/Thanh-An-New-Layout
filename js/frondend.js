@@ -268,34 +268,34 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-// js quậy chơi
-document.addEventListener("DOMContentLoaded", () => {
-	const sections = document.querySelectorAll("section, footer");
+// // js quậy chơi
+// document.addEventListener("DOMContentLoaded", () => {
+// 	const sections = document.querySelectorAll("section, footer");
 
-	// Ẩn tất cả ngay khi vừa load
-	sections.forEach(section => {
-		section.classList.add("hidden-section");
-	});
+// 	// Ẩn tất cả ngay khi vừa load
+// 	sections.forEach(section => {
+// 		section.classList.add("hidden-section");
+// 	});
 
-	// Observer setup
-	const observer = new IntersectionObserver((entries, observer) => {
-		entries.forEach((entry, index) => {
-			if (entry.isIntersecting && entry.intersectionRatio > 0.75) {
-				const el = entry.target;
+// 	// Observer setup
+// 	const observer = new IntersectionObserver((entries, observer) => {
+// 		entries.forEach((entry, index) => {
+// 			if (entry.isIntersecting && entry.intersectionRatio > 0.75) {
+// 				const el = entry.target;
 				
-				// Thêm delay theo thứ tự xuất hiện (index càng lớn càng trễ)
-				el.style.transitionDelay = `${index * 150}ms`; // 150ms mỗi phần
-				el.classList.add("show-up");
+// 				// Thêm delay theo thứ tự xuất hiện (index càng lớn càng trễ)
+// 				el.style.transitionDelay = `${index * 150}ms`; // 150ms mỗi phần
+// 				el.classList.add("show-up");
 
-				// Ngắt theo dõi sau khi hiện
-				observer.unobserve(el);
-			}
-		});
-	}, {
-		threshold: 0.75 // Xuất hiện khi 75% đã cuộn vào màn hình
-	});
+// 				// Ngắt theo dõi sau khi hiện
+// 				observer.unobserve(el);
+// 			}
+// 		});
+// 	}, {
+// 		threshold: 0.75 // Xuất hiện khi 75% đã cuộn vào màn hình
+// 	});
 
-	sections.forEach(section => {
-		observer.observe(section);
-	});
-});
+// 	sections.forEach(section => {
+// 		observer.observe(section);
+// 	});
+// });
