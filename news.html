@@ -22,6 +22,33 @@
                 <a href="#">Kiến thức</a>
             </div>
         </section>
+        <section class="flex flex-col container custom-tab__container">
+            <div class="flex usefull-information ">
+                <h1 id="information-title" class="information-title">Kiến thức</h1>
+            </div>
+            <div class="select-wrapper">
+                <select class="custom-dropdown">
+                    <option value="" disabled selected>Danh mục bạn muốn chọn</option>
+                    <option value="camera-hanh-trinh">Camera hành trình Viemap</option>
+                    <option value="nhoi-xe">Nhớt xe ô tô</option>
+                    <option value="binh-ac-quy">Bình ắc quy ô tô</option>
+                    <option value="cam-bien-lop">Cảm biến lốp xe ô tô</option>
+                    <option value="man-hinh-android">Màn hình Android</option>
+                    <option value="phim-cach-nhiet">Phim cách nhiệt ô tô</option>
+                </select>
+            </div>
+            <div class="flex tab-news">
+                <a href="#" class="tab-news__item active">Tin mới trong ngày</a>
+                <a href="#" class="tab-news__item">Kiến thức về lốp</a>
+                <a href="#" class="tab-news__item">Kiến thức về ắc quy</a>
+                <a href="#" class="tab-news__item">Dịch vụ của lốp cũ</a>
+                <a href="#" class="tab-news__item">Thị trường ô tô</a>
+                <a href="#" class="tab-news__item">Tin mới về Thanh An</a>
+                <a href="#" class="tab-news__item">Kiến thức về phụ kiện xe</a>
+                <a href="#" class="tab-news__item">Videos</a>
+                <a href="#" class="tab-news__item">Mạng lưới giao hàng</a>
+            </div>
+        </section>
         <section class="container flex custom-news__container">
             <div class="flex custom-news__left">
                 <div class="flex custom-news">
@@ -29,11 +56,11 @@
                         <h2 id="information-title" class="information-title">thông tin hữu ích</h2>
                     </div>
                     <div class="flex top-news__container">
-                        <a href="./news-detail.html" class="flex news-vertical__item">
-                            <div class="img-wrapper">
+                        <a href="./news-detail.html" class="flex flex-col news-vertical__item">
+                            <div class="top-news__image">
                                 <img src="./img/news/image.png" alt="Kiến thức về lốp xe">
                             </div>
-                            <div class="flex content-wrapper">
+                            <div class="flex top-news__wrapper">
                                 <strong class="news-container__title">CẢM BIẾN ÁP SUẤT LỐP ICAR ELLISAFE ADI4</strong>
                                 <span class="news-container__date">
                                     Tác giả: Vũ Duy 02/07/2025
@@ -43,14 +70,41 @@
                                 </p>
                             </div>
                         </a>
-                        <div class="flex top-news__side">
-                            <a href="./news-detail.html" class="flex top-menu__list">
-                                <div class="img-wrapper">
+                        <div class="flex flex-col news-rightside">
+                            <a href="./news-detail.html" class="flex news-rightside__item">
+                                <div class="news-rightside__image">
                                     <img src="./img/news/image.png" alt="Kiến thức về lốp xe">
                                 </div>
-                                <div class="flex content-wrapper">
-                                    <p class="news-container__title">CẢM BIẾN ÁP SUẤT LỐP ICAR ELLISAFE
-                                        ADI4</p>
+                                <div class="flex center content-wrapper">
+                                    <h3 class=" flex  news-rightside__title">CẢM BIẾN ÁP SUẤT LỐP ICAR ELLISAFE
+                                        ADI4</h3>
+                                </div>
+                            </a>
+                            <a href="./news-detail.html" class="flex news-rightside__item">
+                                <div class="news-rightside__image">
+                                    <img src="./img/news/image.png" alt="Kiến thức về lốp xe">
+                                </div>
+                                <div class="flex center content-wrapper">
+                                    <h3 class=" flex  news-rightside__title">CẢM BIẾN ÁP SUẤT LỐP ICAR ELLISAFE
+                                        ADI4</h3>
+                                </div>
+                            </a>
+                            <a href="./news-detail.html" class="flex news-rightside__item">
+                                <div class="news-rightside__image">
+                                    <img src="./img/news/image.png" alt="Kiến thức về lốp xe">
+                                </div>
+                                <div class="flex center content-wrapper">
+                                    <h3 class=" flex  news-rightside__title">CẢM BIẾN ÁP SUẤT LỐP ICAR ELLISAFE
+                                        ADI4</h3>
+                                </div>
+                            </a>
+                            <a href="./news-detail.html" class="flex news-rightside__item">
+                                <div class="news-rightside__image">
+                                    <img src="./img/news/image.png" alt="Kiến thức về lốp xe">
+                                </div>
+                                <div class="flex center content-wrapper">
+                                    <h3 class=" flex  news-rightside__title">CẢM BIẾN ÁP SUẤT LỐP ICAR ELLISAFE
+                                        ADI4</h3>
                                 </div>
                             </a>
                         </div>
@@ -75,12 +129,133 @@
                                 </p>
                             </div>
                         </a>
+                        <a href="./news-detail.html" class="flex news__item">
+                            <div class="img-wrapper">
+                                <img src="./img/news/image.png" alt="Kiến thức về lốp xe">
+                            </div>
+                            <div class="flex content-wrapper">
+                                <strong class="news-container__title">CẢM BIẾN ÁP SUẤT LỐP ICAR ELLISAFE ADI4</strong>
+                                <span class="news-container__date">
+                                    Tác giả: Vũ Duy 02/07/2025
+                                </span>
+                                <p class="news-container__sup">
+                                    An toàn giao thông luôn là ưu tiên hàng đầu của mỗi người khi tham gia giao thông
+                                </p>
+                            </div>
+                        </a>
+                        <a href="./news-detail.html" class="flex news__item">
+                            <div class="img-wrapper">
+                                <img src="./img/news/image.png" alt="Kiến thức về lốp xe">
+                            </div>
+                            <div class="flex content-wrapper">
+                                <strong class="news-container__title">CẢM BIẾN ÁP SUẤT LỐP ICAR ELLISAFE ADI4</strong>
+                                <span class="news-container__date">
+                                    Tác giả: Vũ Duy 02/07/2025
+                                </span>
+                                <p class="news-container__sup">
+                                    An toàn giao thông luôn là ưu tiên hàng đầu của mỗi người khi tham gia giao thông
+                                </p>
+                            </div>
+                        </a>
+                        <a href="./news-detail.html" class="flex news__item">
+                            <div class="img-wrapper">
+                                <img src="./img/news/image.png" alt="Kiến thức về lốp xe">
+                            </div>
+                            <div class="flex content-wrapper">
+                                <strong class="news-container__title">CẢM BIẾN ÁP SUẤT LỐP ICAR ELLISAFE ADI4</strong>
+                                <span class="news-container__date">
+                                    Tác giả: Vũ Duy 02/07/2025
+                                </span>
+                                <p class="news-container__sup">
+                                    An toàn giao thông luôn là ưu tiên hàng đầu của mỗi người khi tham gia giao thông
+                                </p>
+                            </div>
+                        </a>
+                        <a href="./news-detail.html" class="flex news__item">
+                            <div class="img-wrapper">
+                                <img src="./img/news/image.png" alt="Kiến thức về lốp xe">
+                            </div>
+                            <div class="flex content-wrapper">
+                                <strong class="news-container__title">CẢM BIẾN ÁP SUẤT LỐP ICAR ELLISAFE ADI4</strong>
+                                <span class="news-container__date">
+                                    Tác giả: Vũ Duy 02/07/2025
+                                </span>
+                                <p class="news-container__sup">
+                                    An toàn giao thông luôn là ưu tiên hàng đầu của mỗi người khi tham gia giao thông
+                                </p>
+                            </div>
+                        </a>
+                        <div class="container flex center page-custom">
+                            <a title="số trang" href="#" class="flex center bg-primary page-number">1</a>
+                            <a title="số trang" href="#" class="flex center bg-primary page-number">2</a>
+                            <a title="số trang" href="#" class="flex center bg-primary page-number">3</a>
+                            <a title="số trang" href="#" class="flex center bg-primary page-number">4</a>
+                            <a title="số trang" href="#" class="flex center bg-primary page-number">5</a>
+                            <a title="số trang" href="#" class="flex center bg-primary page-number">.</a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="flex custom-news__right">
-
+            <div class="flex flex-col custom-news__right">
+                <div class="flex usefull-information ">
+                    <h2 id="information-title" class="information-title">danh mục</h2>
+                </div>
+                <a href="#">Camera hành trình Viemap</a>
+                <a href="#">Nhớt xe ô tô</a>
+                <a href="#">Bình ắc quy ô tô</a>
+                <a href="#">Cảm biến lốp xe ô tô</a>
+                <a href="#">Màn hình Android</a>
+                <a href="#">Phim cách nhiệt ô tô</a>
+                <div class="flex usefull-information ">
+                    <h3 id="information-title" class="information-title">bài viết được xem nhiều</h3>
+                </div>
+                <a href="./news-detail.html" class="flex news-rightside__item">
+                    <div class="news-rightside__image">
+                        <img  src="./img/news/image.png" alt="Kiến thức về lốp xe">
+                    </div>
+                    <div class="flex center content-wrapper">
+                        <h3 class=" flex  news-rightside__title">CẢM BIẾN ÁP SUẤT LỐP ICAR ELLISAFE
+                            ADI4</h3>
+                    </div>
+                </a>
+                <a href="./news-detail.html" class="flex news-rightside__item">
+                    <div class="news-rightside__image">
+                        <img  src="./img/news/image.png" alt="Kiến thức về lốp xe">
+                    </div>
+                    <div class="flex center content-wrapper">
+                        <h3 class=" flex  news-rightside__title">CẢM BIẾN ÁP SUẤT LỐP ICAR ELLISAFE
+                            ADI4</h3>
+                    </div>
+                </a>
+                <a href="./news-detail.html" class="flex news-rightside__item">
+                    <div class="news-rightside__image">
+                        <img  src="./img/news/image.png" alt="Kiến thức về lốp xe">
+                    </div>
+                    <div class="flex center content-wrapper">
+                        <h3 class=" flex  news-rightside__title">CẢM BIẾN ÁP SUẤT LỐP ICAR ELLISAFE
+                            ADI4</h3>
+                    </div>
+                </a>
+                <a href="./news-detail.html" class="flex news-rightside__item">
+                    <div class="news-rightside__image">
+                        <img  src="./img/news/image.png" alt="Kiến thức về lốp xe">
+                    </div>
+                    <div class="flex center content-wrapper">
+                        <h3 class=" flex  news-rightside__title">CẢM BIẾN ÁP SUẤT LỐP ICAR ELLISAFE
+                            ADI4</h3>
+                    </div>
+                </a>
+                <a href="./news-detail.html" class="flex news-rightside__item">
+                    <div class="news-rightside__image">
+                        <img  src="./img/news/image.png" alt="Kiến thức về lốp xe">
+                    </div>
+                    <div class="flex center content-wrapper">
+                        <h3 class=" flex  news-rightside__title">CẢM BIẾN ÁP SUẤT LỐP ICAR ELLISAFE
+                            ADI4</h3>
+                    </div>
+                </a>
             </div>
+
         </section>
         <section class="flex center sectionmenu-status">
             <div class="bg-white container grid menubarmobile_custom">
@@ -107,14 +282,7 @@
             </div>
         </section>
         <section class="flex center">
-            <div class="container flex center page-custom">
-                <a title="số trang" href="#" class="flex center bg-primary page-number">1</a>
-                <a title="số trang" href="#" class="flex center bg-primary page-number">2</a>
-                <a title="số trang" href="#" class="flex center bg-primary page-number">3</a>
-                <a title="số trang" href="#" class="flex center bg-primary page-number">4</a>
-                <a title="số trang" href="#" class="flex center bg-primary page-number">5</a>
-                <a title="số trang" href="#" class="flex center bg-primary page-number">.</a>
-            </div>
+
         </section>
         <section data-include="component/bestselleritem.html" class="flex center"></section>
     </main>
