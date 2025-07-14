@@ -936,7 +936,7 @@
     gap: 10px;
 }
 
-.top-news__wrapper{
+.top-news__wrapper {
     width: 100%;
 }
 
@@ -1355,7 +1355,7 @@
     min-height: 97.73px;
 }
 
-.news-rightside__image{
+.news-rightside__image {
     width: 50%;
 }
 
@@ -1472,35 +1472,35 @@
 }
 
 .select-wrapper {
-  position: relative;
-  display: inline-block;
-  width: 100%;
-  display: none;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    display: none;
 }
 
 .custom-dropdown {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
 
-  background-color: var(--color-white);
-  border: 2px solid var(--primary-color);
-  padding: 10px;
-  padding-right: 40px;
-  font-size: var(--font-size-base);
-  width: 100%;
-  cursor: pointer;
+    background-color: var(--color-white);
+    border: 2px solid var(--primary-color);
+    padding: 10px;
+    padding-right: 40px;
+    font-size: var(--font-size-base);
+    width: 100%;
+    cursor: pointer;
 }
 
 .select-wrapper::after {
-  content: '▼';
-  position: absolute;
-  right: 15px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: var(--primary-color);
-  font-size: 12px;
-  pointer-events: none;
+    content: '▼';
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--primary-color);
+    font-size: 12px;
+    pointer-events: none;
 }
 
 /* popup đánh giá */
@@ -1890,33 +1890,74 @@
 
 /* delirviry network css */
 
-.container{
-
+.delivery-container {
+    gap: 20px;
 }
-.delivery-title{
 
+.delivery-container__info {
+    gap: 20px;
+    flex-wrap: wrap;
 }
-.flex{
 
+.delivery-item {
+    width: calc(100% / 4 - 15px);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    gap: 10px;
+    min-height: 30vh;
+    transition: all 0.8s ease;
 }
-.delivery-container{
 
+.delivery-item:hover {
+    border: 1px solid var(--primary-color);
 }
-.flex-col{
 
+.delivery-item:hover .delivery-item__title {
+    color: var(--primary-color);
 }
-.delivery-item{
 
+.delivery-item:hover .delivery-item__image img {
+    scale: 1.1;
 }
-.delivery-item__image{
 
+.delivery-item__image {
+    width: 100%;
+    overflow: hidden;
 }
-.delivery__wrapper{
 
+.delivery-item__image img {
+    width: 100%;
+    height: auto;
+    transition: all 0.6s ease;
 }
-.delivery-item__title{
 
+.delivery-item__title {
+    font-size: calc(var(--font-size-base) + 2px);
+    color: var(--color-black);
+    font-weight: bold;
 }
-.delivery-item__button{
 
+.delivery__wrapper {
+    gap: 10px;
+    align-items: end;
+}
+
+.delivery__wrapper strong{
+    width: 100%;
+    text-align: left;
+}
+
+.delivery-item__button {
+    color: var(--color-white);
+    gap: 20px;
+    background-color: var(--primary-color);
+    padding: 10px;
+    width: fit-content;
+    font-size: var(--font-size-base);
+}
+
+.delivery-item__button svg {
+    fill: var(--color-white);
+    width: 12px;
+    height: auto;
 }
